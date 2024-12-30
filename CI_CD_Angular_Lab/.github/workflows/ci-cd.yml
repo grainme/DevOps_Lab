@@ -1,9 +1,10 @@
-nname: GitHub Pages
+name: CI/CD Pipeline
 
 on:
   push:
-    branches:
-      - master
+    branches: [master]
+  pull_request:
+    branches: [master]
 
 jobs:
   deploy:
@@ -16,8 +17,7 @@ jobs:
         run: npm ci
 
       - name: Build
-        run: ng build
-
+        run: ng build --base-href=/DevOps_Lab/CI_CD_Angular_Lab/
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
