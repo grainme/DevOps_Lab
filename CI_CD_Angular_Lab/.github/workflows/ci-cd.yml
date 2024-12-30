@@ -21,7 +21,7 @@ jobs:
         run: npm install
 
       - name: Build
-        run: ng build --base-href "/DevOps_Lab/CI_CD_Angular_Lab/"
+        run: ng build
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
